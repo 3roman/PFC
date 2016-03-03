@@ -5,11 +5,12 @@
 #include "管道柔性计算器.h"
 #include "管道柔性计算器Dlg.h"
 #include <math.h>
+#include <TCHAR.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
-static char THIS_FILE[] = __FILE__;
+static TCHAR THIS_FILE[] = __FILE__;
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -161,6 +162,23 @@ BOOL ReleaseResource(UINT nRsrcID,  const TCHAR *szRsrcType,  const TCHAR *szFil
 	return FALSE;
 }
 
+// 复制到剪切板
+void CMyDlg::Copy2Clipboard(CString strContent)
+{
+	if(::OpenClipboard(m_hWnd) &&::EmptyClipboard())
+	{
+		HGLOBAL clipbuffer;
+		TCHAR * buffer;
+		EmptyClipboard();
+		clipbuffer = GlobalAlloc(GMEM_DDESHARE, strContent.GetLength()+1);
+		buffer = (TCHAR*)GlobalLock(clipbuffer);
+		strcpy(buffer, LPCSTR(strContent));
+		GlobalUnlock(clipbuffer);
+		SetClipboardData(CF_TEXT,clipbuffer);
+		CloseClipboard();
+	}
+}
+
 // 计算线性膨胀量
 float CMyDlg::foo(const float length)
 {
@@ -187,6 +205,10 @@ void CMyDlg::OnBtnCalculate()
 
 	if (208.3<=fResult)
 		AfxMessageBox(_T("管系柔性不合格!"));
+
+	CString strContent;
+	GetDlgItemText(IDC_EDT_LE, strContent);
+	Copy2Clipboard(strContent);
 }
 
 void CMyDlg::OnChkCe() 
@@ -200,12 +222,12 @@ void CMyDlg::OnBtnClear()
 {
 	// 重新初始化所有变量
 	m_do = 0;
-	m_ta = 20;
+	m_ta = 0;
 	m_td = 0;
-	m_la = 0.0f;
-	m_height = 0.0f;
-	m_ls = 0.0f;
-	m_ce = 0.0f;
+	m_la = 0;
+	m_height = 0;
+	m_ls = 0;
+	m_ce = 0;
 
 	UpdateData(FALSE);
 

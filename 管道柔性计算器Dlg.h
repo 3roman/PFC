@@ -46,6 +46,7 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CMyDlg)
 	virtual BOOL OnInitDialog();
+	void Copy2Clipboard(CString strContent);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnChkAt();
