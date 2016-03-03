@@ -46,7 +46,6 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CMyDlg)
 	virtual BOOL OnInitDialog();
-	void Copy2Clipboard(CString strContent);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnChkAt();
@@ -59,7 +58,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	float foo(const float length);
+	double foo(const double length);
+	void Copy2Clipboard(const CString strContent);
 };
 
 //{{AFX_INSERT_LOCATION}}

@@ -163,7 +163,7 @@ BOOL ReleaseResource(UINT nRsrcID,  const TCHAR *szRsrcType,  const TCHAR *szFil
 }
 
 // 复制到剪切板
-void CMyDlg::Copy2Clipboard(CString strContent)
+void CMyDlg::Copy2Clipboard(const CString strContent)
 {
 	if(::OpenClipboard(m_hWnd) &&::EmptyClipboard())
 	{
@@ -180,7 +180,7 @@ void CMyDlg::Copy2Clipboard(CString strContent)
 }
 
 // 计算线性膨胀量
-float CMyDlg::foo(const float length)
+double CMyDlg::foo(const double length)
 {
 	return m_ce * length * (m_td - m_ta) / 1000;
 }
@@ -192,10 +192,10 @@ void CMyDlg::OnBtnCalculate()
 
 	CString strLE, strResult;
 	// 总位移量 = 各向位移量平方和再开根号
-	float fle = sqrt(foo(m_ls)*foo(m_ls) + foo(m_la)*foo(m_la) + foo(m_height)*foo(m_height));
+	double fle = sqrt(foo(m_ls)*foo(m_ls) + foo(m_la)*foo(m_la) + foo(m_height)*foo(m_height));
 
 	// 计算值 = 总位移量 * 管道外径 / (管道总长-管道直线距离)^2
-	float fResult = m_do * fle / (2*m_la+2*m_height) /  (2*m_la+2*m_height);
+	double fResult = m_do * fle / (2*m_la+2*m_height) /  (2*m_la+2*m_height);
 
 	strLE.Format(_T("%3.3f"), fle);
 	strResult.Format(_T("%3.3f"), fResult);
