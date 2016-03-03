@@ -1,0 +1,223 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\管道柔性计算器.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\管道柔性计算器.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MY_DIALOG DIALOGEX 0, 0, 247, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_APPWINDOW
+CAPTION "管道柔性计算器  hangch@2014-05-22"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDT_CE,60,20,52,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_TD,60,38,52,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DO,60,74,52,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_TA,60,56,52,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_LA,75,108,55,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_HEIGHT,75,126,55,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_LS,75,144,55,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_LE,155,39,60,12,ES_AUTOHSCROLL | ES_READONLY,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDT_RESULT,155,70,60,12,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "计 算",IDC_BTN_CALCULATE,156,96,40,14
+    PUSHBUTTON      "清 空",IDC_BTN_CLEAR,201,96,40,14
+    PUSHBUTTON      "查询线胀系数",IDC_BTN_SEARCH,156,114,85,12
+    LTEXT           "环境温度",IDC_STATIC,12,58,33,8
+    LTEXT           "设计温度",IDC_STATIC,12,40,33,8
+    LTEXT           "固定点直线距离",IDC_STATIC,12,146,57,8
+    LTEXT           "m",IDC_STATIC,136,110,8,8
+    LTEXT           "mm",IDC_STATIC,218,39,9,8
+    LTEXT           "℃",IDC_STATIC,116,40,9,8
+    GROUPBOX        "基本参数",IDC_STATIC,7,6,143,85
+    GROUPBOX        "管系参数",IDC_STATIC,7,95,143,64
+    LTEXT           "mm",IDC_STATIC,116,76,9,8
+    LTEXT           "膨胀弯架空高度",IDC_STATIC,12,128,57,8
+    LTEXT           "膨胀弯伸出臂长",IDC_STATIC,12,110,57,8
+    LTEXT           "m",IDC_STATIC,136,128,8,8
+    LTEXT           "m",IDC_STATIC,136,146,8,8
+    LTEXT           "计算结果",IDC_STATIC,184,9,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ENHMETAFILE | SS_SUNKEN,152,21,
+                    93,2
+    CONTROL         "总位移量",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,155,27,33,8
+    LTEXT           "mm2/m2",IDC_STATIC,218,72,25,8
+    LTEXT           "计算结果(≤208.3合格)",IDC_STATIC,155,58,85,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ENHMETAFILE | SS_SUNKEN,152,89,
+                    93,2
+    LTEXT           "℃",IDC_STATIC,116,58,9,8
+    LTEXT           "线胀系数",IDC_STATIC,12,22,33,8
+    LTEXT           "10^-6/℃",IDC_STATIC,116,22,33,8
+    LTEXT           "Static",IDC_STT_INFO,154,130,86,29,SS_SUNKEN | NOT 
+                    WS_GROUP
+    LTEXT           "管道外径",IDC_STATIC,12,76,33,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "校验膨胀弯柔性是否足够\0"
+            VALUE "CompanyName", "SNEC\0"
+            VALUE "FileDescription", "Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 1, 0\0"
+            VALUE "InternalName", "Piping Flexibility Calculator\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2014\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "\0"
+            VALUE "ProductVersion", "\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// JPG
+//
+
+IDR_JPG                 JPG     DISCARDABLE     "res\\GB 50764-2012.jpg"
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\管道柔性计算器.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
